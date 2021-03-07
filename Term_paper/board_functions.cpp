@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-//how the board is displayed in the console (5*5):
+// how the board is displayed in the console 
+// (example for boardsize 5*5):
 //
 // 1 * * * * *
 // 2 * * * * *
@@ -27,11 +28,11 @@
 // a - 97
 // h - 104
 // 
-//while everything goes through the ass
-//but I'm trying to fix it
+// while everything goes through the ass
+// but I'm trying to fix it
 
 
-//procedure creating the board with size of a user
+// procedure creating the board with size of a user
 void create_board(char board[6][6], int coordinates_columns[], char coordinates_string[])
 {
     //filling in an array of coordinates
@@ -42,8 +43,8 @@ void create_board(char board[6][6], int coordinates_columns[], char coordinates_
     }
 }
 
-//procedure for displaying the chessboard in the console
-//it also outputs the coordinates of the board
+// procedure for displaying the chessboard in the console
+// it also outputs the coordinates of the board
 void print_borad(char board[6][6])
 {
     for (int i = 0; i < 6; i++)
