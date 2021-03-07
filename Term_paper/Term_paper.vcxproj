@@ -144,7 +144,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="board_functions.cpp" />
     <ClCompile Include="Term_paper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="board_functions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
