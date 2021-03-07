@@ -3,15 +3,9 @@
 
 int main(int argc, char const* argv[]) 
 {
-    char board[6][6] = { {'1', '*', '*' , '*' , '*' , '*' }
-                        ,{'2', '*', '*' , '*' , '*' , '*' }
-                        ,{'3', '*', '*' , '@' , '*' , '*' }
-                        ,{'4', '*', '*' , '*' , '*' , '*' }
-                        ,{'5', '*', '*' , '*' , '*' , '*' } 
-                        ,{ '  ', 'a', 'b', 'c', 'd', 'e'} };
-    char coordinates_string[6] = { 'a', 'b', 'c', 'd', 'e', '\0' };
-    int coordinates_columns[6];
-    //create_board(board, coordinates_string, coordinates_columns);
-    print_borad (board);
+    char choice[3];
+    printf_s("Введите размер шахматной доски: (в формате x*y)");
+    scanf_s("%s", &choice, 3);
+    if (choice[0] <= 49 && choice[0] >= 56 && choice[0] <= 49 && choice[0] >= 56)
     return 0;
 }

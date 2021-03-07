@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//Как выводится доска в консоль:
+//how the board is displayed in the console (5*5):
 //
 // 1 * * * * *
 // 2 * * * * *
@@ -9,40 +9,41 @@
 // 5 * * * * *
 //   a b c d e
 //
-//пока все идет через жопу
-//но пытаюсь исправить
+// char for simbols in there:
+// 
+// * - 42
+// 
+// 1 - 49
+// 2 - 50
+// 3 - 51
+// 4 - 52
+// 5 - 53
+// 6 - 54
+// 7 - 55
+// 8 - 56
+// 
+// @ - 64
+// 
+// a - 97
+// h - 104
+// 
+//while everything goes through the ass
+//but I'm trying to fix it
 
-void create_board(char board[6][6], int coordinates_columns[])
+
+//procedure creating the board with size of a user
+void create_board(char board[6][6], int coordinates_columns[], char coordinates_string[])
 {
-    ////Заполнение массива координат
-    //for (int i = 0; i < 5; i++)
-    //{
-    //    coordinates_columns[i] = i + 1;
-    //}
-    ////Заполнение массива доски (в который входит так же координаты)
-    //for (int i = 0; i < 5; i++)
-    //{
-    //    for (int j = 0; j < 5; j++)
-    //    {
-    //        if (i == 0)
-    //        {
-    //            board[i][j] = (char)(coordinates_columns[i]);
-    //        }
-    //        else if (i == 2 && j == 2)
-    //        {
-    //            board[i][j] = '@';
-    //        }
-    //        else
-    //        {
-    //            board[i][j] = '.';
-    //        }
-    //    }
-    //}
- 
+    //filling in an array of coordinates
+    for (int i = 0; i < 5; i++)
+    {
+        coordinates_columns[i] = i + 1;
+        printf_s("coordinates_columns[%d] = %d\n", i, coordinates_columns[i]);
+    }
 }
 
-//Процедура вывода шахматной доски в консоль
-//Так же выводит координаты доски
+//procedure for displaying the chessboard in the console
+//it also outputs the coordinates of the board
 void print_borad(char board[6][6])
 {
     for (int i = 0; i < 6; i++)
