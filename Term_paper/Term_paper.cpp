@@ -1,20 +1,14 @@
 ﻿#include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 #include <stdbool.h>
 #include "board_functions.h"
-
-//change colsol encoding to Russian
-void changing_the_console_encoding()
-{
-    system("chcp 1251");
-    system("cls");
-}
 
 int main(int argc, char const* argv[]) 
 {
     int choice;
     bool your_choice_is_shit = true;
-    changing_the_console_encoding();
+    setlocale(LC_ALL, "Russian");
     do
     {
         printf_s("Выберите игру: \n1) Обход шахматной доски\n2) Перестановки\n");
