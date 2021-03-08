@@ -22,7 +22,7 @@ int main(int argc, char const* argv[])
                 system("cls");
                 // array of char for validation user choice
                 int x, y;
-                printf_s("Введите размер шахматной доски: \n");
+                printf_s("Введите размер шахматной доски: (5*5-8*8) \n");
                 printf_s("x = ");
                 scanf_s("%d", &x);
                 printf_s("y = ");
@@ -35,7 +35,7 @@ int main(int argc, char const* argv[])
                     && y <= 8 && y >= 5 //size of columns must be in segment [5;8]
                     && x == y)      //sizes must be the same         
                 {
-                    printf_s("Проверка на Булата не сработала\n");
+                    printf_s("Успешно введены верные координаты\n");
                     your_choice_is_shit = false;
                 }
                 break;
