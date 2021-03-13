@@ -2,7 +2,15 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <stdbool.h>
+#include <malloc.h>
+#include "chess_knight_functions.h"
 #include "board_functions.h"
+
+struct chess_knight 
+{
+    int x, y;      // chess knight coordinates
+    char color[5]; // chess knight color
+};
 
 int main(int argc, char const* argv[]) 
 {
@@ -17,11 +25,12 @@ int main(int argc, char const* argv[])
         {
             case 1:
             {
-                //case for chessboard traversal
-                //claening the screen
+                // case for chessboard traversal
+                // claening the screen
                 system("cls");
                 // array of char for validation user choice
                 int x, y;
+                char** chessboard;
                 printf_s("Введите размер шахматной доски: (5*5-8*8) \n");
                 printf_s("x = ");
                 scanf_s("%d", &x);
@@ -31,29 +40,35 @@ int main(int argc, char const* argv[])
                 // the dimensions must be the same, 
                 // since the board is square 
                 // according to the problem condition
-                if (x <= 8 && x >= 5 //size of strings must be in segment [5;8]
-                    && y <= 8 && y >= 5 //size of columns must be in segment [5;8]
-                    && x == y)      //sizes must be the same         
+                if    (x <= 8 && x >= 5    // size of strings must be in segment [5;8]
+                    && y <= 8 && y >= 5    // size of columns must be in segment [5;8]
+                    && x == y)             // sizes must be the same         
                 {
-                    printf_s("Успешно введены верные координаты\n");
                     your_choice_is_shit = false;
+                    printf_s("Успешно введены верные координаты\n");
+                    printf_s("%s", knight_move_validator() ? "true":"false");
+                }
+                else
+                {
+                    printf_s("Введены неверные координаты\n");
                 }
                 break;
             }
             case 2:
             {
-                //case for permutations
-                //claening the screen
+                // case for permutations
+                // claening the screen
                 system("cls");
                 printf_s("d");
+                your_choice_is_shit = false;
                 break;
             }
             default:
             {
-                //case for invalid input
-                //claening the screen
+                // case for invalid input
+                // claening the screen
                 system("cls");
-                printf_s("Неверный ввод!");
+                printf_s("Неверный ввод!\n");
                 break;
             }
         }

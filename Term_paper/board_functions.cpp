@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <malloc.h>
 
 // how the board is displayed in the console 
 // (example for boardsize 5*5):
@@ -30,7 +31,6 @@
 // 
 // while everything goes through the ass
 // but I'm trying to fix it
-
 
 // procedure creating the board with size of a user
 void create_board(char board[6][6], int coordinates_columns[], char coordinates_string[])
